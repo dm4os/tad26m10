@@ -8,7 +8,7 @@ Library         OperatingSystem
 @{IamAglobal}
 ${IamAlocal}
 
-@{mammals}      cat    dog    cow    bull 
+@{mammals}      cat    dog    cow    bull    birds    
 # in python the prev list --> mammals = ["cat","dog","cow","bull"]
 
 *** Keywords ***    # Keywords are like functions in python and others
@@ -24,6 +24,11 @@ I_am_a_KW_RET_some_text
 check_for_loop
     FOR   ${var}    IN    @{mammals}
         Log To Console    ${var}
+        ${toBreak}=    Set Variable    birds
+        IF    "${var}" == "${toBreak}" 
+            Log To Console    I have found the ${var}     #cow.
+            BREAK
+        END
     END
 
 *** Test Cases ***
