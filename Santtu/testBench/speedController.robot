@@ -11,7 +11,8 @@ ${Old_Speed}=    ${0}
 ${Acceleration}=     ${0}
 
 *** Keywords ***
-Find_speed_limit
+Find_speed_limit 
+    #Unused
     ${var}=    Set Variable    ${Speed_Limits}
     @{Current_Speed}=    Set Variable    ${var}
     [Return]    ${var}
@@ -26,6 +27,7 @@ Find_acceleration
     END
 
 check_each_speed_limit
+    #Unused
     FOR    ${var}    IN    ${Speed_Limits}
         Log To Console    ${var}
     END
@@ -36,12 +38,12 @@ check_each_speed_limit
 Accelerating to 120, going through each speed limit
     [Tags]    Speed test
 
-    FOR    ${var}    IN    @{Speed_Limits}
+    FOR    ${Speed_Limit}    IN    @{Speed_Limits}
         
-        ${Acceleration}=    Find_acceleration    ${var}    ${Old_Speed}
-        Log To Console    ${Acceleration}
+        ${Acceleration}=    Find_acceleration    ${Speed_Limit}    ${Old_Speed}
+        Log To Console    In order to reach ${Speed_Limit}km/h we need to accelerate ${Acceleration}km/h
 
-        ${Old_Speed}=    Set Variable    ${var}
+        ${Old_Speed}=    Set Variable    ${Speed_Limit}
 
         Should Be True    ${0} <= ${Acceleration} <= ${30}
     END
