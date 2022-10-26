@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RPS RF" tests="4" errors="0" failures="0" skipped="0" time="14.352" timestamp="2022-10-26T12:00:40.624000">
-<testcase classname="RPS RF" name="Turn on Power supply 2 remotely" time="2.030">
+<testsuite name="RPS RF" tests="4" errors="0" failures="0" skipped="0" time="14.373" timestamp="2022-10-26T12:20:07.206000">
+<testcase classname="RPS RF" name="Turn on Power supply 1 remotely" time="2.052">
 </testcase>
-<testcase classname="RPS RF" name="Verify power supply 2 is on" time="2.022">
+<testcase classname="RPS RF" name="Verify power supply 1 is on" time="2.032">
 </testcase>
-<testcase classname="RPS RF" name="Turn off Power supply 2 remotely" time="2.048">
+<testcase classname="RPS RF" name="Turn off Power supply 1 remotely" time="2.046">
 </testcase>
-<testcase classname="RPS RF" name="Verify power supply 2 is off" time="2.038">
+<testcase classname="RPS RF" name="Verify power supply 1 is off" time="2.043">
 </testcase>
 </testsuite>

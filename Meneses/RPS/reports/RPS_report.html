@@ -1,103 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221026 12:00:40.622" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221026 12:20:07.204" rpa="false" schemaversion="3">
 <suite id="s1" name="RPS RF" source="C:\Users\DanAn\OneDrive\BACKUP_MMXIX\Desktop\TAQ\tad26m10\Meneses\RPS\RPS_RF.robot">
-<test id="s1-t1" name="Turn on Power supply 2 remotely" line="17">
+<test id="s1-t1" name="Turn on Power supply 1 remotely" line="17">
 <kw name="RPS send commands">
 <var>${out}</var>
 <arg>SetPower</arg>
-<arg>2</arg>
+<arg>0</arg>
 <arg>1</arg>
 <kw name="Send Cmds" library="commands">
 <var>${output}</var>
 <arg>${command}</arg>
 <arg>${port}</arg>
 <arg>${state}</arg>
-<msg timestamp="20221026 12:00:48.865" level="INFO">http://admin:12345678@localhost:5000/SetCmd?CMD=SetPower</msg>
-<msg timestamp="20221026 12:00:48.865" level="INFO">${output} = True</msg>
-<status status="PASS" starttime="20221026 12:00:46.837" endtime="20221026 12:00:48.865"/>
+<msg timestamp="20221026 12:20:15.457" level="INFO">http://admin:12345678@localhost:5000/SetCmd?CMD=SetPower</msg>
+<msg timestamp="20221026 12:20:15.457" level="INFO">${output} = True</msg>
+<status status="PASS" starttime="20221026 12:20:13.407" endtime="20221026 12:20:15.457"/>
 </kw>
-<msg timestamp="20221026 12:00:48.865" level="INFO">${out} = True</msg>
-<status status="PASS" starttime="20221026 12:00:46.836" endtime="20221026 12:00:48.865"/>
+<msg timestamp="20221026 12:20:15.457" level="INFO">${out} = True</msg>
+<status status="PASS" starttime="20221026 12:20:13.407" endtime="20221026 12:20:15.457"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${out}</arg>
 <arg>${True}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20221026 12:00:48.866" endtime="20221026 12:00:48.866"/>
+<status status="PASS" starttime="20221026 12:20:15.457" endtime="20221026 12:20:15.458"/>
 </kw>
-<status status="PASS" starttime="20221026 12:00:46.836" endtime="20221026 12:00:48.866"/>
+<status status="PASS" starttime="20221026 12:20:13.406" endtime="20221026 12:20:15.458"/>
 </test>
-<test id="s1-t2" name="Verify power supply 2 is on" line="21">
+<test id="s1-t2" name="Verify power supply 1 is on" line="21">
 <kw name="RPS get Power">
 <var>${out}</var>
 <arg>GetPower</arg>
 <kw name="Send Cmds" library="commands">
 <var>${output}</var>
 <arg>${command}</arg>
-<msg timestamp="20221026 12:00:50.888" level="INFO">http://admin:12345678@localhost:5000/SetCmd?CMD=GetPower</msg>
-<msg timestamp="20221026 12:00:50.888" level="INFO">${output} = P60=0P61=0P62=1P63=1</msg>
-<status status="PASS" starttime="20221026 12:00:48.868" endtime="20221026 12:00:50.888"/>
+<msg timestamp="20221026 12:20:17.489" level="INFO">http://admin:12345678@localhost:5000/SetCmd?CMD=GetPower</msg>
+<msg timestamp="20221026 12:20:17.489" level="INFO">${output} = P60=1P61=0P62=1P63=1</msg>
+<status status="PASS" starttime="20221026 12:20:15.459" endtime="20221026 12:20:17.489"/>
 </kw>
-<msg timestamp="20221026 12:00:50.888" level="INFO">${out} = P60=0P61=0P62=1P63=1</msg>
-<status status="PASS" starttime="20221026 12:00:48.867" endtime="20221026 12:00:50.888"/>
+<msg timestamp="20221026 12:20:17.489" level="INFO">${out} = P60=1P61=0P62=1P63=1</msg>
+<status status="PASS" starttime="20221026 12:20:15.459" endtime="20221026 12:20:17.489"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${out}</arg>
-<arg>P62=1</arg>
+<arg>P60=1</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20221026 12:00:50.888" endtime="20221026 12:00:50.889"/>
+<status status="PASS" starttime="20221026 12:20:17.489" endtime="20221026 12:20:17.490"/>
 </kw>
-<status status="PASS" starttime="20221026 12:00:48.867" endtime="20221026 12:00:50.889"/>
+<status status="PASS" starttime="20221026 12:20:15.458" endtime="20221026 12:20:17.490"/>
 </test>
-<test id="s1-t3" name="Turn off Power supply 2 remotely" line="25">
+<test id="s1-t3" name="Turn off Power supply 1 remotely" line="25">
 <kw name="RPS send commands">
 <var>${out}</var>
 <arg>SetPower</arg>
-<arg>2</arg>
+<arg>0</arg>
 <arg>0</arg>
 <kw name="Send Cmds" library="commands">
 <var>${output}</var>
 <arg>${command}</arg>
 <arg>${port}</arg>
 <arg>${state}</arg>
-<msg timestamp="20221026 12:00:52.936" level="INFO">http://admin:12345678@localhost:5000/SetCmd?CMD=SetPower</msg>
-<msg timestamp="20221026 12:00:52.936" level="INFO">${output} = True</msg>
-<status status="PASS" starttime="20221026 12:00:50.890" endtime="20221026 12:00:52.936"/>
+<msg timestamp="20221026 12:20:19.535" level="INFO">http://admin:12345678@localhost:5000/SetCmd?CMD=SetPower</msg>
+<msg timestamp="20221026 12:20:19.535" level="INFO">${output} = True</msg>
+<status status="PASS" starttime="20221026 12:20:17.491" endtime="20221026 12:20:19.535"/>
 </kw>
-<msg timestamp="20221026 12:00:52.936" level="INFO">${out} = True</msg>
-<status status="PASS" starttime="20221026 12:00:50.889" endtime="20221026 12:00:52.936"/>
+<msg timestamp="20221026 12:20:19.535" level="INFO">${out} = True</msg>
+<status status="PASS" starttime="20221026 12:20:17.490" endtime="20221026 12:20:19.535"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${out}</arg>
 <arg>${True}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20221026 12:00:52.937" endtime="20221026 12:00:52.937"/>
+<status status="PASS" starttime="20221026 12:20:19.535" endtime="20221026 12:20:19.536"/>
 </kw>
-<status status="PASS" starttime="20221026 12:00:50.889" endtime="20221026 12:00:52.937"/>
+<status status="PASS" starttime="20221026 12:20:17.490" endtime="20221026 12:20:19.536"/>
 </test>
-<test id="s1-t4" name="Verify power supply 2 is off" line="29">
+<test id="s1-t4" name="Verify power supply 1 is off" line="29">
 <kw name="RPS get Power">
 <var>${out}</var>
 <arg>GetPower</arg>
 <kw name="Send Cmds" library="commands">
 <var>${output}</var>
 <arg>${command}</arg>
-<msg timestamp="20221026 12:00:54.975" level="INFO">http://admin:12345678@localhost:5000/SetCmd?CMD=GetPower</msg>
-<msg timestamp="20221026 12:00:54.975" level="INFO">${output} = P60=0P61=0P62=0P63=1</msg>
-<status status="PASS" starttime="20221026 12:00:52.938" endtime="20221026 12:00:54.975"/>
+<msg timestamp="20221026 12:20:21.578" level="INFO">http://admin:12345678@localhost:5000/SetCmd?CMD=GetPower</msg>
+<msg timestamp="20221026 12:20:21.578" level="INFO">${output} = P60=0P61=0P62=1P63=1</msg>
+<status status="PASS" starttime="20221026 12:20:19.537" endtime="20221026 12:20:21.578"/>
 </kw>
-<msg timestamp="20221026 12:00:54.975" level="INFO">${out} = P60=0P61=0P62=0P63=1</msg>
-<status status="PASS" starttime="20221026 12:00:52.938" endtime="20221026 12:00:54.975"/>
+<msg timestamp="20221026 12:20:21.578" level="INFO">${out} = P60=0P61=0P62=1P63=1</msg>
+<status status="PASS" starttime="20221026 12:20:19.537" endtime="20221026 12:20:21.578"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${out}</arg>
-<arg>P62=0</arg>
+<arg>P60=0</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20221026 12:00:54.975" endtime="20221026 12:00:54.976"/>
+<status status="PASS" starttime="20221026 12:20:21.578" endtime="20221026 12:20:21.579"/>
 </kw>
-<status status="PASS" starttime="20221026 12:00:52.938" endtime="20221026 12:00:54.976"/>
+<status status="PASS" starttime="20221026 12:20:19.536" endtime="20221026 12:20:21.579"/>
 </test>
-<status status="PASS" starttime="20221026 12:00:40.624" endtime="20221026 12:00:54.976"/>
+<status status="PASS" starttime="20221026 12:20:07.206" endtime="20221026 12:20:21.579"/>
 </suite>
 <statistics>
 <total>
