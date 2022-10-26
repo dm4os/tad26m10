@@ -8,7 +8,7 @@ Library         OperatingSystem
 @{IamAglobal}
 ${IamAlocal}
 
-@{mammals}      cat    dog    cow    bull    birds    
+@{animals}      cat    dog    cow    bull    birds    
 # in python the prev list --> mammals = ["cat","dog","cow","bull"]
 
 *** Keywords ***    # Keywords are like functions in python and others
@@ -22,9 +22,9 @@ I_am_a_KW_RET_some_text
     [Return]    ${var}
 
 check_for_loop
-    FOR   ${var}    IN    @{mammals}
+    FOR   ${var}    IN    @{animals}
         Log To Console    ${var}
-        ${toBreak}=    Set Variable    birds
+        ${toBreak}=    Set Variable    bull
         IF    "${var}" == "${toBreak}" 
             Log To Console    I have found the ${var}     #cow.
             BREAK
