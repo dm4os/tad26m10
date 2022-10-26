@@ -8,3 +8,8 @@ This repository contains topics discussed during the day with students as well a
 
 # How to run your robot framework scripts
 -> robot <path where your rf files are located/><filename>.robot
+
+To root reports to an specific location you need to  
+-> robot -x <path>output.xml -l <path>log.html <path>report.html <path><filename>.robot
+
+---> Example: robot -x Meneses/SpeedController/reports/output_26102022.xml -l Meneses/SpeedController/reports/log_26102022.html -o Meneses/SpeedController/reports/report_26102022.html  Meneses/SpeedController/testBench/tc1.robot

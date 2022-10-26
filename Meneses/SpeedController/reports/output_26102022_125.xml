@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tc1" tests="2" errors="0" failures="0" skipped="0" time="0.073" timestamp="2022-10-26T08:22:18.594000">
+<testcase classname="Tc1" name="I am a test case validating KW 1" time="0.004">
+</testcase>
+<testcase classname="Tc1" name="I am a test case validating KW 2" time="0.005">
+</testcase>
+<properties>
+<property name="Documentation" value="Our first test with robot"/>
+</properties>
+</testsuite>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221026 08:21:44.451" rpa="false" schemaversion="3">
+<suite id="s1" name="Tc1" source="C:\Users\DanAn\OneDrive\BACKUP_MMXIX\Desktop\TAQ\tad26m10\Meneses\SpeedController\testBench\tc1.robot">
+<test id="s1-t1" name="I am a test case validating KW 1" line="22">
+<kw name="I_am_a_KW_RET_defined_text">
+<var>${ret}</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${var}</var>
+<arg>Test automation with robot framework</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221026 08:21:44.518" level="INFO">${var} = Test automation with robot framework</msg>
+<status status="PASS" starttime="20221026 08:21:44.518" endtime="20221026 08:21:44.518"/>
+</kw>
+<msg timestamp="20221026 08:21:44.519" level="INFO">${ret} = Test automation with robot framework</msg>
+<status status="PASS" starttime="20221026 08:21:44.517" endtime="20221026 08:21:44.519"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${ret}</arg>
+<arg>Test automation with robot framework</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221026 08:21:44.519" endtime="20221026 08:21:44.520"/>
+</kw>
+<tag>Smoke test</tag>
+<status status="PASS" starttime="20221026 08:21:44.517" endtime="20221026 08:21:44.520"/>
+</test>
+<test id="s1-t2" name="I am a test case validating KW 2" line="28">
+<kw name="Set Variable" library="BuiltIn">
+<var>${mustBe}</var>
+<arg>anything</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221026 08:21:44.523" level="INFO">${mustBe} = anything</msg>
+<status status="PASS" starttime="20221026 08:21:44.523" endtime="20221026 08:21:44.523"/>
+</kw>
+<kw name="I_am_a_KW_RET_some_text">
+<var>${ret}</var>
+<arg>${mustBe}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${var}</var>
+<arg>${i_text}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221026 08:21:44.524" level="INFO">${var} = anything</msg>
+<status status="PASS" starttime="20221026 08:21:44.524" endtime="20221026 08:21:44.524"/>
+</kw>
+<msg timestamp="20221026 08:21:44.524" level="INFO">${ret} = anything</msg>
+<status status="PASS" starttime="20221026 08:21:44.523" endtime="20221026 08:21:44.524"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${ret}</arg>
+<arg>${mustBe}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221026 08:21:44.524" endtime="20221026 08:21:44.524"/>
+</kw>
+<tag>Integration test</tag>
+<status status="PASS" starttime="20221026 08:21:44.522" endtime="20221026 08:21:44.525"/>
+</test>
+<doc>Our first test with robot</doc>
+<status status="PASS" starttime="20221026 08:21:44.455" endtime="20221026 08:21:44.528"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Integration test</stat>
+<stat pass="1" fail="0" skip="0">Smoke test</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tc1">Tc1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
