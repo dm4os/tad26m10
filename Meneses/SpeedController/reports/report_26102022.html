@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221026 09:01:17.836" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221026 10:41:25.297" rpa="false" schemaversion="3">
 <suite id="s1" name="Tc1" source="C:\Users\DanAn\OneDrive\BACKUP_MMXIX\Desktop\TAQ\tad26m10\Meneses\SpeedController\testBench\tc1.robot">
-<test id="s1-t1" name="I am a test case validating KW 1" line="32">
+<test id="s1-t1" name="I am a test case validating KW 1" line="35">
 <kw name="I_am_a_KW_RET_defined_text">
 <var>${ret}</var>
 <kw name="Set Variable" library="BuiltIn">
 <var>${var}</var>
 <arg>Test automation with robot framework</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20221026 09:01:17.859" level="INFO">${var} = Test automation with robot framework</msg>
-<status status="PASS" starttime="20221026 09:01:17.859" endtime="20221026 09:01:17.859"/>
+<msg timestamp="20221026 10:41:25.320" level="INFO">${var} = Test automation with robot framework</msg>
+<status status="PASS" starttime="20221026 10:41:25.319" endtime="20221026 10:41:25.320"/>
 </kw>
-<msg timestamp="20221026 09:01:17.860" level="INFO">${ret} = Test automation with robot framework</msg>
-<status status="PASS" starttime="20221026 09:01:17.859" endtime="20221026 09:01:17.860"/>
+<msg timestamp="20221026 10:41:25.320" level="INFO">${ret} = Test automation with robot framework</msg>
+<status status="PASS" starttime="20221026 10:41:25.319" endtime="20221026 10:41:25.320"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ret}</arg>
 <arg>Test automation with robot framework</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20221026 09:01:17.860" endtime="20221026 09:01:17.860"/>
+<status status="PASS" starttime="20221026 10:41:25.320" endtime="20221026 10:41:25.320"/>
 </kw>
 <tag>Smoke test</tag>
-<status status="PASS" starttime="20221026 09:01:17.859" endtime="20221026 09:01:17.860"/>
+<status status="PASS" starttime="20221026 10:41:25.319" endtime="20221026 10:41:25.320"/>
 </test>
-<test id="s1-t2" name="I am a test case validating KW 2" line="38">
+<test id="s1-t2" name="I am a test case validating KW 2" line="41">
 <kw name="Set Variable" library="BuiltIn">
 <var>${mustBe}</var>
 <arg>anything</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20221026 09:01:17.861" level="INFO">${mustBe} = anything</msg>
-<status status="PASS" starttime="20221026 09:01:17.861" endtime="20221026 09:01:17.861"/>
+<msg timestamp="20221026 10:41:25.321" level="INFO">${mustBe} = anything</msg>
+<status status="PASS" starttime="20221026 10:41:25.321" endtime="20221026 10:41:25.321"/>
 </kw>
 <kw name="I_am_a_KW_RET_some_text">
 <var>${ret}</var>
@@ -38,70 +38,201 @@
 <var>${var}</var>
 <arg>${i_text}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20221026 09:01:17.862" level="INFO">${var} = anything</msg>
-<status status="PASS" starttime="20221026 09:01:17.861" endtime="20221026 09:01:17.862"/>
+<msg timestamp="20221026 10:41:25.322" level="INFO">${var} = anything</msg>
+<status status="PASS" starttime="20221026 10:41:25.322" endtime="20221026 10:41:25.322"/>
 </kw>
-<msg timestamp="20221026 09:01:17.862" level="INFO">${ret} = anything</msg>
-<status status="PASS" starttime="20221026 09:01:17.861" endtime="20221026 09:01:17.862"/>
+<msg timestamp="20221026 10:41:25.322" level="INFO">${ret} = anything</msg>
+<status status="PASS" starttime="20221026 10:41:25.322" endtime="20221026 10:41:25.322"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${ret}</arg>
 <arg>${mustBe}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20221026 09:01:17.862" endtime="20221026 09:01:17.862"/>
+<status status="PASS" starttime="20221026 10:41:25.322" endtime="20221026 10:41:25.322"/>
 </kw>
 <tag>Integration test</tag>
-<status status="PASS" starttime="20221026 09:01:17.861" endtime="20221026 09:01:17.862"/>
+<status status="PASS" starttime="20221026 10:41:25.321" endtime="20221026 10:41:25.322"/>
 </test>
-<test id="s1-t3" name="Test our for loop" line="44">
+<test id="s1-t3" name="Test our for loop" line="47">
 <kw name="check_for_loop">
-<kw name="0">
-<var>${ctr}</var>
-<msg timestamp="20221026 09:01:17.864" level="FAIL">No keyword with name '0' found.</msg>
-<status status="FAIL" starttime="20221026 09:01:17.864" endtime="20221026 09:01:17.864"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${ctr}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221026 09:01:17.864" endtime="20221026 09:01:17.864"/>
-</kw>
 <for flavor="IN">
 <var>${var}</var>
 <value>@{mammals}</value>
 <iter>
-<var name="${var}"/>
+<var name="${var}">cat</var>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${var}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221026 09:01:17.865" endtime="20221026 09:01:17.865"/>
+<status status="PASS" starttime="20221026 10:41:25.323" endtime="20221026 10:41:25.324"/>
 </kw>
-<status status="NOT RUN" starttime="20221026 09:01:17.864" endtime="20221026 09:01:17.865"/>
+<kw name="Set Variable" library="BuiltIn">
+<var>${toBreak}</var>
+<arg>birds</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221026 10:41:25.324" level="INFO">${toBreak} = birds</msg>
+<status status="PASS" starttime="20221026 10:41:25.324" endtime="20221026 10:41:25.324"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${var}&quot; == &quot;${toBreak}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>I have found the ${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221026 10:41:25.324" endtime="20221026 10:41:25.324"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20221026 10:41:25.324" endtime="20221026 10:41:25.324"/>
+</break>
+<status status="NOT RUN" starttime="20221026 10:41:25.324" endtime="20221026 10:41:25.324"/>
+</branch>
+<status status="PASS" starttime="20221026 10:41:25.324" endtime="20221026 10:41:25.324"/>
+</if>
+<status status="PASS" starttime="20221026 10:41:25.323" endtime="20221026 10:41:25.324"/>
 </iter>
-<status status="NOT RUN" starttime="20221026 09:01:17.864" endtime="20221026 09:01:17.865"/>
+<iter>
+<var name="${var}">dog</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221026 10:41:25.325" endtime="20221026 10:41:25.325"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${toBreak}</var>
+<arg>birds</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221026 10:41:25.325" level="INFO">${toBreak} = birds</msg>
+<status status="PASS" starttime="20221026 10:41:25.325" endtime="20221026 10:41:25.325"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${var}&quot; == &quot;${toBreak}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>I have found the ${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221026 10:41:25.325" endtime="20221026 10:41:25.325"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20221026 10:41:25.325" endtime="20221026 10:41:25.325"/>
+</break>
+<status status="NOT RUN" starttime="20221026 10:41:25.325" endtime="20221026 10:41:25.325"/>
+</branch>
+<status status="PASS" starttime="20221026 10:41:25.325" endtime="20221026 10:41:25.325"/>
+</if>
+<status status="PASS" starttime="20221026 10:41:25.324" endtime="20221026 10:41:25.325"/>
+</iter>
+<iter>
+<var name="${var}">cow</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221026 10:41:25.326" endtime="20221026 10:41:25.326"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${toBreak}</var>
+<arg>birds</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221026 10:41:25.326" level="INFO">${toBreak} = birds</msg>
+<status status="PASS" starttime="20221026 10:41:25.326" endtime="20221026 10:41:25.326"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${var}&quot; == &quot;${toBreak}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>I have found the ${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221026 10:41:25.326" endtime="20221026 10:41:25.326"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20221026 10:41:25.326" endtime="20221026 10:41:25.326"/>
+</break>
+<status status="NOT RUN" starttime="20221026 10:41:25.326" endtime="20221026 10:41:25.326"/>
+</branch>
+<status status="PASS" starttime="20221026 10:41:25.326" endtime="20221026 10:41:25.326"/>
+</if>
+<status status="PASS" starttime="20221026 10:41:25.325" endtime="20221026 10:41:25.326"/>
+</iter>
+<iter>
+<var name="${var}">bull</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221026 10:41:25.326" endtime="20221026 10:41:25.327"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${toBreak}</var>
+<arg>birds</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221026 10:41:25.327" level="INFO">${toBreak} = birds</msg>
+<status status="PASS" starttime="20221026 10:41:25.327" endtime="20221026 10:41:25.327"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${var}&quot; == &quot;${toBreak}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>I have found the ${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221026 10:41:25.327" endtime="20221026 10:41:25.327"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20221026 10:41:25.327" endtime="20221026 10:41:25.327"/>
+</break>
+<status status="NOT RUN" starttime="20221026 10:41:25.327" endtime="20221026 10:41:25.327"/>
+</branch>
+<status status="PASS" starttime="20221026 10:41:25.327" endtime="20221026 10:41:25.327"/>
+</if>
+<status status="PASS" starttime="20221026 10:41:25.326" endtime="20221026 10:41:25.327"/>
+</iter>
+<iter>
+<var name="${var}">birds</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221026 10:41:25.327" endtime="20221026 10:41:25.327"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${toBreak}</var>
+<arg>birds</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221026 10:41:25.328" level="INFO">${toBreak} = birds</msg>
+<status status="PASS" starttime="20221026 10:41:25.328" endtime="20221026 10:41:25.328"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${var}&quot; == &quot;${toBreak}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>I have found the ${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221026 10:41:25.328" endtime="20221026 10:41:25.328"/>
+</kw>
+<break>
+<status status="PASS" starttime="20221026 10:41:25.328" endtime="20221026 10:41:25.328"/>
+</break>
+<status status="PASS" starttime="20221026 10:41:25.328" endtime="20221026 10:41:25.328"/>
+</branch>
+<status status="PASS" starttime="20221026 10:41:25.328" endtime="20221026 10:41:25.328"/>
+</if>
+<status status="PASS" starttime="20221026 10:41:25.327" endtime="20221026 10:41:25.328"/>
+</iter>
+<status status="PASS" starttime="20221026 10:41:25.323" endtime="20221026 10:41:25.328"/>
 </for>
-<status status="FAIL" starttime="20221026 09:01:17.863" endtime="20221026 09:01:17.865"/>
+<status status="PASS" starttime="20221026 10:41:25.323" endtime="20221026 10:41:25.328"/>
 </kw>
 <kw name="Should Be True" library="BuiltIn">
 <arg>1+1==2</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="NOT RUN" starttime="20221026 09:01:17.865" endtime="20221026 09:01:17.865"/>
+<status status="PASS" starttime="20221026 10:41:25.329" endtime="20221026 10:41:25.329"/>
 </kw>
 <tag>Smoke test</tag>
-<status status="FAIL" starttime="20221026 09:01:17.863" endtime="20221026 09:01:17.865">No keyword with name '0' found.</status>
+<status status="PASS" starttime="20221026 10:41:25.323" endtime="20221026 10:41:25.329"/>
 </test>
 <doc>Our first test with robot</doc>
-<status status="FAIL" starttime="20221026 09:01:17.837" endtime="20221026 09:01:17.866"/>
+<status status="PASS" starttime="20221026 10:41:25.298" endtime="20221026 10:41:25.330"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="1" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">Integration test</stat>
-<stat pass="1" fail="1" skip="0">Smoke test</stat>
+<stat pass="2" fail="0" skip="0">Smoke test</stat>
 </tag>
 <suite>
-<stat pass="2" fail="1" skip="0" id="s1" name="Tc1">Tc1</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Tc1">Tc1</stat>
 </suite>
 </statistics>
 <errors>
