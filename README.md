@@ -29,6 +29,11 @@ This repository contains topics discussed during the day with students as well a
 -> pip install flask
 -> pip install Flask-HTTPAuth
 
+### Steps for runing the RPS and robot test bench
+* export FLASK_APP=Meneses/RPS/rps-server.py  -!-Notice the path, this is mine-!-
+* flask run 
+* Then run robot script by typing --> robot Meneses/RPS/RPS_RF.robot  -!-Notice the path, this is mine-!-
+
 # How to run your robot framework scripts
 -> robot <path where your rf files are located/><filename>.robot
 
