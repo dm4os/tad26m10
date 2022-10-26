@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Tc1" tests="2" errors="0" failures="0" skipped="0" time="0.073" timestamp="2022-10-26T08:21:44.455000">
-<testcase classname="Tc1" name="I am a test case validating KW 1" time="0.003">
+<testsuite name="Tc1" tests="3" errors="0" failures="1" skipped="0" time="0.029" timestamp="2022-10-26T09:01:17.837000">
+<testcase classname="Tc1" name="I am a test case validating KW 1" time="0.001">
 </testcase>
-<testcase classname="Tc1" name="I am a test case validating KW 2" time="0.003">
+<testcase classname="Tc1" name="I am a test case validating KW 2" time="0.001">
+</testcase>
+<testcase classname="Tc1" name="Test our for loop" time="0.002">
+<failure message="No keyword with name '0' found." type="AssertionError"/>
 </testcase>
 <properties>
 <property name="Documentation" value="Our first test with robot"/>

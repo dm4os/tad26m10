@@ -2,13 +2,16 @@
 Documentation    Our first test with robot
 
 Library         OperatingSystem
-#Resource        anyresourcefile
+#Resource        ../sub1/sub2/sub3/anyresourcefile
 
 *** Variables ***
 @{IamAglobal}
 ${IamAlocal}
 
-*** Keywords ***
+@{mammals}      cat    dog    cow    bull 
+# in python the prev list --> mammals = ["cat","dog","cow","bull"]
+
+*** Keywords ***    # Keywords are like functions in python and others
 I_am_a_KW_RET_defined_text
     ${var}=     Set Variable    Test automation with robot framework
     [Return]    ${var}
@@ -17,6 +20,11 @@ I_am_a_KW_RET_some_text
     [Arguments]    ${i_text}
     ${var}=     Set Variable    ${i_text}
     [Return]    ${var}
+
+check_for_loop
+    FOR   ${var}    IN    @{mammals}
+        Log To Console    ${var}
+    END
 
 *** Test Cases ***
 I am a test case validating KW 1
@@ -30,3 +38,8 @@ I am a test case validating KW 2
     ${mustBe}=    Set Variable    anything
     ${ret}=   I_am_a_KW_RET_some_text    ${mustBe}
     Should be equal    ${ret}    ${mustBe}
+
+Test our for loop
+    [tags]    Smoke test
+    check_for_loop
+    Should be true    1+1==2
